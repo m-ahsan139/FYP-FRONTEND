@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LegalMind AI — Access the complete legal knowledge of Pakistan's law, constitution, and acts." />
+    <title>LegalMind AI — Enter the Legal Archive</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <style>
+        /* Page-specific overrides for login */
+        body {
+            /* Prevent flash of login page if already authenticated */
+        }
+    </style>
+</head>
+<body class="login-body page-fadein">
+
+    <!-- =====================================================
+         BACKGROUND SCENE
+         ===================================================== -->
+    <div class="bg-scene" aria-hidden="true"></div>
+
+    <!-- Particle canvas (golden dust) -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Floor overlay -->
+    <div class="floor-overlay" aria-hidden="true"></div>
+
+    <!-- Bookshelf side decorations -->
+    <div class="bookshelf-left"  aria-hidden="true"></div>
+    <div class="bookshelf-right" aria-hidden="true"></div>
+
+    <!-- =====================================================
+         LOGIN WRAPPER
+         ===================================================== -->
+    <main class="login-wrapper">
+        <div class="login-panel" role="main">
+
+            <!-- Wax seal icon -->
+            <div class="wax-seal" aria-hidden="true">⚖️</div>
+
+            <!-- Title -->
+            <h1 class="login-title">⚖️ LegalMind AI</h1>
+            <p class="login-subtitle">"Access the Knowledge of Pakistan's Legal System"</p>
+
+            <hr class="panel-divider" />
+
+            <!-- Login Form -->
+            <form id="login-form" novalidate autocomplete="off">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                        aria-required="true"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                        aria-required="true"
+                    />
+                </div>
+
+                <!-- Error message -->
+                <div
+                    id="error-message"
+                    class="error-message"
+                    role="alert"
+                    aria-live="polite"
+                >
+                    Access Denied — Unauthorized Entry to the Legal Archive.
+                </div>
+
+                <!-- Submit button -->
+                <button
+                    type="submit"
+                    id="login-btn"
+                    class="login-btn"
+                    aria-label="Enter the Legal Archive"
+                >
+                    Enter the Legal Archive
+                </button>
+
+            </form>
+
+            <!-- Decorative footer note inside panel -->
+            <p class="panel-note">
+                Established MMXXVI &nbsp;•&nbsp; For Authorized Personnel Only
+            </p>
+        </div>
+    </main>
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+    <script src="js/particles.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
